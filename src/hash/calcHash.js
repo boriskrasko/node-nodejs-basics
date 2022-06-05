@@ -1,7 +1,7 @@
 import fs from 'fs';
 import crypto from 'crypto';
 const fd = fs.createReadStream('src/hash/files/fileToCalculateHashFor.txt');
-const hash = crypto.createHash('md5');
+const hash = crypto.createHash('sha256');
 hash.setEncoding('hex');
 
 export const calculateHash = async () => {
