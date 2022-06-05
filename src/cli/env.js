@@ -1,6 +1,9 @@
 export const parseEnv = () => {
-	const processList = {...process.env}
-	console.log(processList);
-};
+	Object.entries(process.env).forEach(([prop, value]) => {
+	  if (prop.slice(0, 4) === 'RSS_') {
+      console.log(`${prop}=${value};`);
+      }
+    });
+  };
 
-parseEnv();
+  parseEnv();
