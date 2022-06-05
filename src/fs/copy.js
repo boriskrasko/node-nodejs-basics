@@ -4,7 +4,7 @@ const dir = 'src/fs/files';
 const newDir = 'src/fs/files_copy';
 const files = fs.readdirSync(dir)
 
-const copy = async () => {
+export const copy = async () => {
   fs.stat(dir, function (err, stats) {
     if (err) {
       throw err('FS operation failed!');

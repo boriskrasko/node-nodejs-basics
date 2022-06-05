@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const list = async () => {
+export  const list = async () => {
   fs.stat('src/fs/files', function (err, stats) {
     if (err) {
       throw err('FS operation failed!');

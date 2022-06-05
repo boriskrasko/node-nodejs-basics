@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const rename = async () => {
+export const rename = async () => {
   fs.stat('src/fs/files/properFilename.md', function (err, stats) {
     if (err) {
       fs.stat('src/fs/files/wrongFilename.txt', function (err, stats) {

@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const remove = async () => {
+export const remove = async () => {
   fs.stat('src/fs/files/fileToRemove.txt', function (err, stats) {
     if (err) {
       throw err('FS operation failed!');

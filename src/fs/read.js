@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const read = async () => {
+export const read = async () => {
   fs.stat('src/fs/files/fileToRead.txt', function (err, stats) {
     if (err) {
       throw err('FS operation failed!');
