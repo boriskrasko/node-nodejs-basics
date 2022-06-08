@@ -1,3 +1,16 @@
+import fs from "fs";
+
 export const remove = async () => {
-    // Write your code here 
+  fs.stat('src/fs/files/fileToRemove.txt', function (err, stats) {
+    if (err) {
+      throw err('FS operation failed!');
+    } else {
+      fs.unlink('src/fs/files/fileToRemove.txt', function (err) {
+        if (err) throw err;
+        console.log('Done!');
+      });
+    }
+  });
 };
+
+remove();
